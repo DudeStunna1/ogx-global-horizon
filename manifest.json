@@ -1,18 +1,19 @@
 {
-  "name": "OGX PWA",
+  "name": "OGX Global Horizon LLC",
   "short_name": "OGX",
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#050505",
-  "theme_color": "#111111",
+  "background_color": "#000000",
+  "theme_color": "#ffd700",
+  "description": "Empowering Global Fintech & Digital Innovation",
   "icons": [
     {
-      "src": "assets/icon-192.png",
+      "src": "assets/ogx-logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/icon-512.png",
+      "src": "assets/ogx-logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
