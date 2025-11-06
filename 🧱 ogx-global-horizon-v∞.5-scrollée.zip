@@ -1,0 +1,33 @@
+ogx-global-horizon/
+│
+├── bash/
+│   ├── deploy.sh
+│   ├── sync.sh
+│   ├── report.sh
+│   ├── post.sh
+│
+├── yaml/
+│   ├── OGX_Master_Config.yaml
+│   ├── Social_Agents.yaml
+│   ├── Beats_Feed.yaml
+│   ├── Post_Templates.yaml
+│   └── THARA_Checksum_Log.yaml
+│
+├── js/
+│   ├── scripts.js
+│   ├── sw.js
+│   └── ogx-bot.js
+│
+├── env/
+│   └── .env
+│
+├── docs/
+│   ├── OGX_Scrollée_Setup.pdf
+│   └── QR_Install_OGX.png
+│
+├── manifest.json
+├── netlify.toml
+└── README.md
+git add .
+git commit -m "OGX Scrollée v∞.5 — THARA Full Activation"
+git push origin main
