@@ -1,15 +1,15 @@
 agents:
+  - name: "THARA_OGX_Bot"
+    platform: "Telegram"
+    chat_id: "REPLACE_WITH_CHAT_ID"
+    post_sync: true
+
   - name: "ANEKA"
     platform: "Instagram"
-    api_key: "replace_with_instagram_api_key"
+    api_key: "REPLACE_WITH_INSTAGRAM_KEY"
     status: "active"
 
   - name: "VAENRA"
     platform: "Twitter"
-    api_key: "replace_with_twitter_api_key"
+    api_key: "REPLACE_WITH_TWITTER_KEY"
     status: "active"
-
-  - name: "THARA_OGX_Bot"
-    platform: "Telegram"
-    chat_id: "replace_with_chat_id"
-    post_sync: true
