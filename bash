@@ -1,3 +1,3 @@
-git add .
-git commit -m "Upgrade OGX Global Horizon v∞.5 Scrollée"
+git add netlify.toml
+git commit -m "Fix build command for OGX Scrollée v∞.5"
 git push origin main
