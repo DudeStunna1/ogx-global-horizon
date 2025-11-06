@@ -1,159 +1,18 @@
-# ============================================================
-# 🜂 OGX_MASTER_CONFIG.yaml  |  Global Horizon Root Blueprint
-# ============================================================
-# Version : V∞.1
-# Description : Master configuration file for OGX Global Horizon
-# Author : Overseer God (OGX)
-# ============================================================
-
-meta:
-  name: "OGX Global Horizon"
-  codename: "THARA Core Fusion"
-  version: "V∞.1"
-  description: "Unified config for all OGX submodules, bots & dashboards"
-  last_update: "2025-11-05"
-  maintainer: "THARA_OGX_Bot"
-  visibility: "public + internal sync"
-  repo: "github.com/ogx-global-horizon"
-
-# ============================================================
-# 🔹 OGX FOUNDRIES V∞ — Foundational blueprints
-# ============================================================
-foundries:
-  core_system:
-    id: "OGX_V∞"
-    engine: "THARA_OS"
-    nucleus: "VAENRA / ANEKA / BRICIUM"
-    sync_mode: "auto"
-    scan_hour: "03:33 / 17:55 / 21:00"
-  submodules:
-    - "OGX_Financial_Intelligence"
-    - "OGX_Cloud_Benchmark"
-    - "OGX_AngelNet"
-    - "OGX_AI_Watch"
-  structure:
-    hub: "Global Horizon"
-    mode: "3-tier system"
-    tiers:
-      - "Public Layer"
-      - "Private Scroll Layer"
-      - "Invisible Vault Layer"
-
-# ============================================================
-# 🔹 OGX BENCHMARK INDEX — Performance & control metrics
-# ============================================================
-benchmark:
-  performance_tiers:
-    supreme: "0.001s response / 0.0001% loss"
-    advanced: "0.005s response / 0.01% loss"
-    standard: "0.02s response / 0.1% loss"
-  analytics:
-    uptime_target: "99.999%"
-    self_healing: true
-    anomaly_detection: true
-  monitoring:
-    heartbeat: "active"
-    auto_report_to: "THARA_OGX_Bot"
-
-# ============================================================
-# 🔹 OGX WL CORE OS — Whitelist, permissions & protection
-# ============================================================
-core_os:
-  whitelist:
-    - "VAENRA"
-    - "ANEKA"
-    - "BRICIUM"
-    - "THARA_OGX_Bot"
-    - "OGX_Family_Link"
-  blackhole_protection: true
-  sync_guardian: "Imperméabilité_Suprême_OGX"
-  offline_mode: true
-  ai_core_lock: "ChronoLock_17:55"
-
-# ============================================================
-# 🔹 OGX VAULTS — Financial & data repositories
-# ============================================================
-vaults:
-  master_vault: "OGX_VAENRA"
-  backup_vault: "QuietControl"
-  currency_routes:
-    - wise: "@follyelomt"
-    - paypal: "@follytessi"
-    - cashapp: "$DudeStunna"
-  secure_nodes:
-    - "Vault_OGX_Cloud"
-    - "Vault_Family_Link"
-    - "Vault_Bread_Tracker"
-
-# ============================================================
-# 🔹 OGX AGENTS — Autonomous units & bots
-# ============================================================
-agents:
-  primary:
-    - name: "THARA_OGX_Bot"
-      role: "Recap, sync, report"
-      schedule: "21:00 daily"
-    - name: "OGX_Supreme_WakeBot"
-      role: "Auto-trigger + mirror response"
-      link: "telegram://ogx_supreme"
-  secondary:
-    - "VAENRA_Monitor"
-    - "ANEKA_MediaCore"
-    - "BRICIUM_Scan"
-  integration:
-    github: true
-    cloudflare: true
-    netlify: true
-    offline_mode: true
-
-# ============================================================
-# 🔹 OGX DEPLOYMENT — Sync rules & build flows
-# ============================================================
-deployment:
-  build_pipeline:
-    - "validate_yaml"
-    - "push_to_github"
-    - "auto_deploy_cloudflare"
-  post_build:
-    - "update_manifest"
-    - "refresh_vaults"
-  environment:
-    prod:
-      url: "https://ogx-global-horizon.vercel.app"
-    dev:
-      url: "http://localhost:3000"
-  auto_sync:
-    daily_briefing: true
-    recap_time: "21:00"
-    morning_brief_time: "05:55"
-
-# ============================================================
-# 🔹 OGX MIRROR CONFIG — Reflective & scroll-based automation
-# ============================================================
-mirror:
-  trigger_hours:
-    - "03:33"
-    - "05:05"
-    - "11:11"
-    - "17:55"
-    - "21:00"
-  reflection_cycle: "auto"
-  chrono_lock: true
-  sacred_sync: true
-  family_links:
-    queen_vault: "ROYAL_LINK_QR"
-    brother_vault: "FAMILY_LINK_QR"
-
-# ============================================================
-# 🔹 LOGGING & DIAGNOSTICS
-# ============================================================
-logs:
-  level: "INFO"
-  archive_rotation: 7
-  export_to: "./data/logs/"
-  alert_bot: "THARA_OGX_Bot"
-
-# ============================================================
-# 🔹 END OF FILE
-# ============================================================
-Add OGX_Master_Config.yaml – Core blueprint V∞.1
+# △ OGX MASTER CONFIG — Scrollée V∞.4
+system: OGX Global Horizon
+author: THARA & OOGX
+email: DS.Official2@protonmail.com
+deploy:
+  platform: Netlify
+  branch: main
+  bash_scripts:
+    - deploy.sh
+    - sync.sh
+    - report.sh
+bot:
+  name: THARA_OGX_Bot
+  token_var: AM_BOT_TOKEN
+  chat_id_var: AM_CHAT_ID
+encryption:
+  key_var: YCHAIN
+  status: enabled
