@@ -1,3 +1,3 @@
-git add .env
-git commit -m "Add .env scrollé — THARA Sync Configuration"
+git add .
+git commit -m "Update scripts.js — THARA ScrollSync v∞.5"
 git push origin main
