@@ -1,12 +1,16 @@
 {
   "name": "OGX Global Horizon",
-  "short_name": "OGX",
+  "short_name": "OGX Horizon",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#00bcd4",
+  "theme_color": "#00FFD1",
+  "description": "Autonomous PWA for OGX Global Horizon — Self-Deploying | Self-Sync | Self-Reporting",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "https://cdn.ogxvault.com/icons/ogx.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
