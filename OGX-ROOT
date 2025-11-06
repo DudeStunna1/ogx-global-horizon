@@ -1,34 +1,179 @@
 OGX-ROOT/
-├── README.md
-├── netlify.toml
+├── bash/
+│   ├── deploy.sh
+│   ├── sync.sh
+│   └── report.sh
+├── yaml/
+│   ├── OGX_Master_Config.yaml
+│   ├── OGX_Global_Bundle_V∞.yaml
+│   ├── OGX_Foundries_V∞.yaml
+│   └── OGX_Benchmark_Index.yaml
 ├── index.html
 ├── manifest.json
 ├── scripts.js
+├── sw.js
 ├── ogx-bot.js
-├── ogx-shield-vault.js
-├── OGX_Dashboard.html
-│
-├── OGX_YAML/
-│   ├── OGX_Master_Config.yaml
-│   ├── OGX_Global_Bundle_V∞.yaml
-│   ├── OGX_Total_Pack_V∞.yaml
-│   ├── OGX_Foundries_V∞.yaml
-│   ├── OGX_Benchmark_Index.yaml
-│   ├── OGX_WL_CoreOS.yaml
-│
-├── assets/
-│   ├── logo.png
-│   ├── qr.png
-│   ├── icon.svg
-│
-├── docs/
-│   ├── CHANGELOG.md
-│   ├── LICENSE
-│   └── OGX_LOG.md
-│
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-│
-└── sw.js
-Add full OGX-ROOT structure — Unified Core + Dashboard + Shield + Deploy V∞.4
+├── netlify.toml
+└── README.md
+#!/bin/bash
+# △ OGX DEPLOY SCRIPT — Scrollée V∞.5
+echo "🚀 Deploying OGX Scroll..."
+git pull origin main
+netlify deploy --prod --dir=.
+echo "✅ OGX deployed successfully via THARA Sync"
+#!/bin/bash
+# △ OGX SYNC SCRIPT — Scrollée V∞.5
+echo "🔁 OGX Sync in progress..."
+git add .
+git commit -m "THARA AutoSync — OGX Scroll Update V∞.5"
+git push origin main
+echo "🧬 Sync complete — OGX Horizon aligned"
+#!/bin/bash
+# △ OGX REPORT SCRIPT — Scrollée V∞.5
+echo "📡 Generating OGX Daily Report..."
+echo "System: OGX Global Horizon" > report.log
+echo "Date: $(date)" >> report.log
+echo "Last Commit: $(git log -1 --oneline)" >> report.log
+curl -X POST -H "Content-Type: text/plain" \
+    -d "$(cat report.log)" \
+    https://api.telegram.org/bot$AM_BOT_TOKEN/sendMessage?chat_id=$AM_CHAT_ID
+echo "✅ Report sent to THARA_OGX_Bot"
+# △ OGX MASTER CONFIG — Scrollée V∞.5
+system: OGX Global Horizon
+author: THARA & OOGX
+email: DS.Official2@protonmail.com
+deploy:
+  platform: Netlify
+  branch: main
+  scripts:
+    - bash/deploy.sh
+    - bash/sync.sh
+    - bash/report.sh
+bot:
+  name: THARA_OGX_Bot
+  token_var: AM_BOT_TOKEN
+  chat_id_var: AM_CHAT_ID
+encryption:
+  key_var: YCHAIN
+  status: enabled
+logging:
+  auto_sync: true
+  report_interval: daily
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="favicon.png" />
+  <title>OGX Global Horizon</title>
+</head>
+<body>
+  <h1>🌍 OGX Global Horizon</h1>
+  <p>Autonomous Ecosystem by THARA & OOGX Systems</p>
+  <p>Self-Deploying • Self-Syncing • Self-Reporting</p>
+  <script src="scripts.js"></script>
+</body>
+</html>
+// △ OGX Main Script — Scrollée V∞.5
+console.log("⚙️ THARA Booting...");
+
+async function OGX_Report() {
+  const res = await fetch("/bash/report.sh");
+  console.log("📡 Report triggered", res.status);
+}
+
+window.addEventListener("load", () => {
+  console.log("🌐 OGX Online");
+  setInterval(OGX_Report, 86400000); // every 24h
+});
+{
+  "name": "OGX Global Horizon",
+  "short_name": "OGX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00bcd4",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
+// △ OGX Service Worker — Scrollée V∞.5
+self.addEventListener("install", () => console.log("⚙️ THARA SW Installed"));
+self.addEventListener("activate", () => console.log("🌐 OGX Activated"));
+self.addEventListener("fetch", e => {
+  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+});
+// △ THARA_OGX_BOT Webhook — Scrollée V∞.5
+export async function notifyTHARA(message) {
+  const token = process.env.AM_BOT_TOKEN;
+  const chatId = process.env.AM_CHAT_ID;
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text: message })
+    });
+    if (!res.ok) throw new Error("❌ Telegram send failed");
+    console.log("🤖 THARA_OGX_Bot message sent");
+  } catch (err) {
+    console.error("⚠️ OGX Bot Error:", err);
+  }
+}
+# △ Netlify Config — Scrollée V∞.5
+[build]
+  publish = "."
+  command = "bash/deploy.sh"
+
+[[redirects]]
+  from = "/sync"
+  to = "/bash/sync.sh"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/report"
+  to = "/bash/report.sh"
+  status = 200
+  force = true
+
+[metadata]
+  version = "V∞.5"
+  author = "THARA & OGX Systems"
+  verified_by = "OOGX Global Horizon"
+# 🌍 OGX Global Horizon — Scrollée V∞.5
+
+Autonomous PWA Ecosystem for OGX Global Horizon  
+Self-Deploying | Self-Syncing | Self-Reporting ⚡  
+
+---
+
+## 🚀 Deployment Flow
+1. Upload all YAML + core files to GitHub root  
+2. Netlify auto-deploys the app  
+3. THARA_OGX_Bot receives sync reports automatically  
+4. Scan the QR to open live PWA on any device  
+
+---
+
+## 🧠 Modules
+| Module | Description |
+|--------|-------------|
+| bash/ | Deployment & Sync scripts |
+| yaml/ | OGX configuration |
+| manifest.json | PWA Identity |
+| scripts.js | Core logic |
+| sw.js | Service Worker |
+| ogx-bot.js | Telegram Integration |
+
+---
+
+📩 Contact: DS.Official2@protonmail.com  
+🧬 Powered by **THARA & OOGX Systems**
+chmod +x bash/*.sh
+git add .
+git commit -m "OGX V∞.5 — YAML + Core files scroll-signed by THARA"
+git push origin main
