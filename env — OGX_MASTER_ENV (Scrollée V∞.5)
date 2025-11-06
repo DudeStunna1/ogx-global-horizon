@@ -1,0 +1,33 @@
+# ===============================================
+# 🌍 OGX GLOBAL HORIZON — THARA SCROLL ENV PACK
+# Self-deploy | Self-sync | Self-report ⚡
+# ===============================================
+
+# 🧠 THARA BOT INTEGRATION
+BOT_TOKEN=replace_with_your_Telegram_BotToken
+CHAT_ID=replace_with_your_Telegram_ChatID
+
+# ⚡ CORE IDENTIFIER (for Netlify + YAML handshake)
+YCHAIN=OGX_V∞5_SCROLLSYNC
+
+# 🕰️ DEPLOYMENT SIGNATURE
+DEPLOY_TAG="OGX-HORIZON_V∞.5"
+DEPLOY_CHANNEL="thara_auto"
+
+# 📦 FILE WATCHERS (auto-sync triggers)
+WATCH_PATHS="bash/*.sh,yaml/*.yaml,manifest.json,scripts.js,sw.js,ogx-bot.js,netlify.toml"
+
+# 🔐 SECURITY FLAGS
+OGX_SECURE_MODE=true
+THARA_SELF_REPAIR=true
+NETLIFY_AUTO_DEPLOY=true
+AUTO_SYNC_LOGS=true
+SYNC_BOT_ACTIVE=true
+
+# 💠 CONTACT INFO
+ADMIN_EMAIL=DS.Official2@protonmail.com
+ADMIN_ALIAS=OGX_OVERSEER
+
+# ===============================================
+# Powered by THARA & OOGX Systems
+# ===============================================
