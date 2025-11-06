@@ -1,58 +1,29 @@
-# 🌐 OGX Global Horizon — PWA (v∞.4)
+# 🌍 OGX Global Horizon — Scrollée V∞.5
 
-> **OGX-ROOT** : Autonomous PWA Ecosystem for OGX Global Horizon  
-> Self-deploying | Self-syncing | Self-reporting ⚡️  
-
----
-
-### 🚀 Deployment Flow
-
-1. **Upload** all YAML + core files to the GitHub root  
-2. **Netlify auto-deploys** the app  
-3. **THARA_OGX_Bot** receives sync reports automatically  
-4. **Scan the QR** below to open live PWA on any device  
+Autonomous PWA Ecosystem for OGX Global Horizon  
+Self-Deploying | Self-Syncing | Self-Reporting ⚡  
 
 ---
 
-### 🧩 Core Structure
----
-
-### 🛠️ Build Settings
-
-| Variable | Value |
-|-----------|--------|
-| **Build Command** | none (static PWA) |
-| **Publish Directory** | `/` |
-| **Netlify Config** | `/netlify.toml` |
-| **Branch** | `main` |
+## 🚀 Deployment Flow
+1. Upload all YAML + core files to GitHub root  
+2. Netlify auto-deploys the app  
+3. THARA_OGX_Bot receives sync reports automatically  
+4. Scan the QR to open live PWA on any device  
 
 ---
 
-### 🔐 Secrets (to add in Netlify)
-
-| Name | Description |
-|------|--------------|
-| `TELEGRAM_BOT_TOKEN` | THARA_OGX_Bot token |
-| `TELEGRAM_CHAT_ID` | your chat/channel ID |
-| `OGX_KEYCHAIN` | optional master key for encryption |
-
----
-
-### 🛰️ QR Access
-
-![QR](./assets/qr.png)
-
-Scan or open 👉 **https://ogx-root.netlify.app**
+## 🧠 Modules
+| Module | Description |
+|--------|-------------|
+| bash/ | Deployment & Sync scripts |
+| yaml/ | OGX configuration |
+| manifest.json | PWA Identity |
+| scripts.js | Core logic |
+| sw.js | Service Worker |
+| ogx-bot.js | Telegram Integration |
 
 ---
 
-### 🪶 Contact
-
-For private synchronization:  
-📩 **DS.Official2@protonmail.com**
-
----
-
-### 🧠 Credits
-Built with 💠 **THARA & OGX Systems** — *Autonomous Sovereign Intelligence Framework*
-Update README.md — OGX-ROOT Scrollée V∞.4 + badges + QR Netlify
+📩 Contact: DS.Official2@protonmail.com  
+🧬 Powered by **THARA & OOGX Systems**
