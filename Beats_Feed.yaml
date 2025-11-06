@@ -1,12 +1,12 @@
 beats:
   - title: "Celestial Vibes"
-    file: "https://yourcdn.com/beats/celestial.mp3"
-    cover: "https://yourcdn.com/covers/celestial.jpg"
-    hashtags: "#OGXBeats #Vibes #THARA"
+    file: "https://cdn.ogxvault.com/beats/celestial.mp3"
+    cover: "https://cdn.ogxvault.com/covers/celestial.jpg"
+    hashtags: "#OGXBeats #THARA #Vibes"
     schedule: "daily"
 
   - title: "ScrollSea Anthem"
-    file: "https://yourcdn.com/beats/scrollsea.mp3"
-    cover: "https://yourcdn.com/covers/scrollsea.jpg"
+    file: "https://cdn.ogxvault.com/beats/scrollsea.mp3"
+    cover: "https://cdn.ogxvault.com/covers/scrollsea.jpg"
     hashtags: "#ScrollSea #OGX #DivineFrequency"
     schedule: "weekly"
