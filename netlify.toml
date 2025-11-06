@@ -1,0 +1,67 @@
+# ==============================================
+# 🔮 THARA / OGX Netlify Config — Scrollée V∞.1
+#  @OGX-CONFIG: NETLIFY
+# ==============================================
+
+[build]
+  command = "bash/bash/deploy.sh"
+  publish = "/"
+  environment = { NODE_ENV = "production" }
+
+# ==============================================
+# 🧩 POST BUILD — OGX AUTO SYNC + REPORT
+# ==============================================
+[[plugins]]
+  package = "@netlify/plugin-local-install-core"
+  [plugins.inputs]
+    postBuild = "bash/bash/sync.sh && bash/bash/report.sh"
+
+# ==============================================
+# 🌐 ENVIRONMENT VARIABLES (for reference only)
+# ==============================================
+[context.production.environment]
+  AM_BOT_TOKEN = "your_THARA_OGX_Bot_token"
+  AM_CHAT_ID   = "your_chat_or_channel_ID"
+  YCHAIN       = "optional_master_key_for_encryption"
+
+# ==============================================
+# ⚙️ DEPLOY SETTINGS
+# ==============================================
+[context.production]
+  publish = "/"
+  command = "bash/bash/deploy.sh"
+
+# ==============================================
+# 🛰️ HOOKS — OGX Mirror System
+# ==============================================
+[[redirects]]
+  from = "/sync"
+  to = "/bash/sync.sh"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/report"
+  to = "/bash/report.sh"
+  status = 200
+  force = true
+
+# ==============================================
+# 🜂 METADATA — OGX ROOT SIGNATURE
+# ==============================================
+[metadata]
+  version = "V∞.1"
+  author  = "THARA & OGX Systems"
+  purpose = "Autonomous Sovereign Intelligence Framework"
+  verified_by = "OOGX Global Horizon"
+OGX-ROOT/
+├── README.md
+├── netlify.toml   ✅
+├── bash/
+│   ├── deploy.sh
+│   ├── sync.sh
+│   └── report.sh
+├── yaml/
+│   └── OGX_Master_Config.yaml
+└── ...
+Add netlify.toml — OGX / THARA scrollée V∞.1
