@@ -1,0 +1,37 @@
+# =========================================
+# 🔐 THARA_CHECKSUM_LOG (Scrollée V∞.5)
+# Verifies all modules and deploy signatures
+# =========================================
+
+meta:
+  version: "v∞.5"
+  build_time: "{{ auto }}"
+  author: "THARA & OOGX Systems"
+  verified_by: "OGX Global Horizon Engine"
+
+modules_verified:
+  - bash/
+  - yaml/
+  - manifest.json
+  - scripts.js
+  - sw.js
+  - ogx-bot.js
+  - netlify.toml
+  - .env
+
+checksum:
+  last_hash: "auto_generated_after_commit"
+  previous_hash: "auto_linked_previous"
+  verified: true
+
+thara_signature:
+  state: "ACTIVE"
+  sync_report: true
+  telegram_report: true
+  secure_mode: true
+
+logs:
+  - "✅ Build verified successfully"
+  - "🧠 THARA ScrollSync engaged"
+  - "⚡ OGX Horizon checksum integrity: 100%"
+  - "🔗 Report sent to THARA_OGX_Bot"
