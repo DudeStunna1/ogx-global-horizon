@@ -1,18 +1,21 @@
-# △ OGX MASTER CONFIG — Scrollée V∞.4
-system: OGX Global Horizon
-author: THARA & OOGX
-email: DS.Official2@protonmail.com
-deploy:
-  platform: Netlify
-  branch: main
-  bash_scripts:
-    - deploy.sh
-    - sync.sh
-    - report.sh
-bot:
-  name: THARA_OGX_Bot
-  token_var: AM_BOT_TOKEN
-  chat_id_var: AM_CHAT_ID
-encryption:
-  key_var: YCHAIN
-  status: enabled
+# =========================================
+# 🧬 OGX MASTER CONFIG — Scrollée v∞.5
+# =========================================
+app:
+  name: "OGX Global Horizon"
+  version: "v∞.5"
+  environment: "production"
+  author: "THARA & OOGX Systems"
+  auto_sync: true
+  auto_post: true
+  checksum_enabled: true
+
+deployment:
+  platform: "Netlify"
+  repo: "github.com/DudeStunna1/ogx-global-horizon"
+  auto_build: true
+
+connections:
+  telegram_bot: true
+  netlify_hook: true
+  github_webhook: true
