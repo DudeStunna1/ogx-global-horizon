@@ -1,0 +1,34 @@
+OGX-ROOT/
+├── README.md
+├── netlify.toml
+├── index.html
+├── manifest.json
+├── scripts.js
+├── ogx-bot.js
+├── ogx-shield-vault.js
+├── OGX_Dashboard.html
+│
+├── OGX_YAML/
+│   ├── OGX_Master_Config.yaml
+│   ├── OGX_Global_Bundle_V∞.yaml
+│   ├── OGX_Total_Pack_V∞.yaml
+│   ├── OGX_Foundries_V∞.yaml
+│   ├── OGX_Benchmark_Index.yaml
+│   ├── OGX_WL_CoreOS.yaml
+│
+├── assets/
+│   ├── logo.png
+│   ├── qr.png
+│   ├── icon.svg
+│
+├── docs/
+│   ├── CHANGELOG.md
+│   ├── LICENSE
+│   └── OGX_LOG.md
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+│
+└── sw.js
+Add full OGX-ROOT structure — Unified Core + Dashboard + Shield + Deploy V∞.4
