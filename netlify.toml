@@ -1,15 +1,18 @@
 [build]
-publish = "dist"
-command = "npm run build"
+  publish = "public"
+  command = "npm install && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18.17.1"
 
 [[redirects]]
-from = "/report"
-to = "/bash/report.sh"
-status = 200
-force = true
+  from = "/report"
+  to = "/bash/report.sh"
+  status = 200
+  force = true
 
-[[redirects]]
-from = "/post"
-to = "/bash/post.sh"
-status = 200
-force = true
+[metadata]
+  version = "v∞.5"
+  author = "THARA & OGX Systems"
+  purpose = "Autonomous PWA Ecosystem for OGX Global Horizon"
+  verified_by = "OOGX Global Horizon Council"
