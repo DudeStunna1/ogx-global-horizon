@@ -1,21 +1,15 @@
-# △ Netlify Config — Scrollée V∞.5
 [build]
-  publish = "."
-  command = "bash/deploy.sh"
+publish = "dist"
+command = "npm run build"
 
 [[redirects]]
-  from = "/sync"
-  to = "/bash/sync.sh"
-  status = 200
-  force = true
+from = "/report"
+to = "/bash/report.sh"
+status = 200
+force = true
 
 [[redirects]]
-  from = "/report"
-  to = "/bash/report.sh"
-  status = 200
-  force = true
-
-[metadata]
-  version = "V∞.5"
-  author = "THARA & OGX Systems"
-  verified_by = "OOGX Global Horizon"
+from = "/post"
+to = "/bash/post.sh"
+status = 200
+force = true
