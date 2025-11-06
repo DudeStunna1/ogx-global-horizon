@@ -1,21 +1,9 @@
-{
-  "name": "OGX Global Horizon LLC",
-  "short_name": "OGX",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ffd700",
-  "description": "Empowering Global Fintech & Digital Innovation",
-  "icons": [
-    {
-      "src": "assets/ogx-logo.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/ogx-logo.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+// △ OGX Main Script — Scrollée V∞.4
+self.addEventListener("install", () => console.log("⚙️ THARA Install Complete"));
+self.addEventListener("activate", () => console.log("🌐 OGX Activated"));
+
+async function OGX_Report() {
+  const res = await fetch("/bash/report.sh");
+  console.log("📡 Report triggered", res.status);
 }
+setInterval(OGX_Report, 86400000); // Daily
